@@ -1,4 +1,6 @@
-<?php namespace Purpleobject\Mongodb\Session;
+<?php
+
+namespace Purpleobject\Mongodb\Session;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,4 +24,16 @@ class SessionServiceProvider extends ServiceProvider {
         });
     }
 
+    /**
+     * Perform post-registration booting of services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->publishes([
+            realpath(__DIR__.'/migrations') => $this->app->databasePath().'/migrations',
+        ]);
+    }
+    
 }

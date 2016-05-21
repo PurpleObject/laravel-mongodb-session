@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-0": {
-      "PurpleObject\\Mongodb\\Session": "src/"
+      "Purpleobject\\Mongodb\\Session": "src/"
     }
   }
 }
