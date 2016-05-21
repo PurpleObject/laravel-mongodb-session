@@ -71,14 +71,14 @@ class SessionManager extends \Illuminate\Support\Manager
     protected function getMongoDBOptions($database, $collection)
     {
         return [
-            'database'   => $database,
-            'collection' => $collection,
-            'id_field'   => '_id',
-            'data_field' => 'user_id',
-            'data_field' => 'ip_address',
-            'data_field' => 'user_agent',
-            'data_field' => 'payload',
-            'time_field' => 'last_activity'
+            'database'         => $database,
+            'collection'       => $collection,
+            'id_field'         => '_id',
+            'user_id_field'    => 'user_id',
+            'ip_address_field' => 'ip_address',
+            'user_agent_field' => 'user_agent',
+            'payload_field'    => 'payload',
+            'time_field'       => 'last_activity'
         ];
     }
 
